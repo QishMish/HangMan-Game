@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link rel ="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+    <div class="container" id='bg'>
+        <div class="figure-container">
+            <h1>Hangman Game</h1>
+            <p>Guess Hidden Word</p>
+            <div class="row">
+                <svg height ='360px' with='280px' class="figure">
+                    <!-- frame -->
+                    <line x1='50' y1='50' x2='160' y2='50' ></line>
+                    <line x1='50' y1='50' x2='50' y2='270' ></line>
+                    <line x1='0' y1='270' x2='100' y2='270' ></line>
+                    <line x1='160' y1='50' x2='160' y2='80'></line>
+                    <!-- head -->
+                    <circle cx='160' cy='100' r='20' class="parts" ></circle>
+                    <!-- body -->
+                    <line x1='160' y1='120' x2='160' y2='180' class="parts"></line>
+                    <!-- arms -->
+                    <line x1='160' y1='150' x2='140' y2='125' class="parts"></line>
+                    <line x1='160' y1='150' x2='180' y2='125' class="parts"></line>
+                    <!-- legs -->
+                    <line x1='160' y1='180' x2='140' y2='205' class="parts"></line>
+                    <line x1='160' y1='180' x2='180' y2='205' class="parts"></line>
+                </svg>
+    
+                <div class="wrong-letters-container">
+                    <p>Wrong Letter:</p>
+                    <div class="wrong-rows" id='wrong'>
+                        <!-- <span>f</span>
+                        <span>f</span>
+                        <span>f</span> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="words">
+                
+            </div>
+
+            <div class="modal">
+                <p class="final-message"></p>
+                <button class="button-restart">Restart Game</button>
+            </div>
+
+        </div>
+        <div class="notification">
+            <p>You Have Entered This Words</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
